@@ -35,14 +35,12 @@ def BOTH(velR,numR,velL,numL):
         else:
             GPIO.output(IN3,GPIO.LOW)
             GPIO.output(IN4,GPIO.LOW)
-        if(GPIO.input(DataMotorR)==1):
-            if(GPIO.input(DataMotorR)==0):
-                contadorR=contadorR+1
-                print ('contador derecha = ',contadorR)
-        if(GPIO.input(DataMotorL)==1):
-            if(GPIO.input(DataMotorL)==0):
-                contadorL=contadorL+1
-                print ('contador izquierda = ',contadorL)        
+        if (GPIO.input(DataMotorR) == 1) and (GPIO.input(DataMotorR) == 0):
+            contadorR += 1
+            print ('contador derecha = ',contadorR)
+        if (GPIO.input(DataMotorL) == 1) and (GPIO.input(DataMotorL) == 0):
+            contadorL += 1
+            print ('contador izquierda = ',contadorL)
     MOVIMIENTOS.STOP()
 #############################################
 ###########################FUNCION PASO DERECHA#######################
@@ -57,10 +55,9 @@ def RIGHT(vel,num):
     contador=0
     while (contador<num):
         PWMA.start(vel)
-        if(GPIO.input(DataMotorR)==1):
-            if(GPIO.input(DataMotorR)==0):
-                contador=contador+1
-                print ('contador derecha = ',contador)
+        if (GPIO.input(DataMotorR) == 1) and (GPIO.input(DataMotorR) == 0):
+            contador += 1
+            print ('contador derecha = ',contador)
     MOVIMIENTOS.STOP()
 #########################FUNCION PASO IZQUIERDA#############################   
 def LEFT(vel,num):
@@ -74,8 +71,7 @@ def LEFT(vel,num):
     contador=0
     while (contador<num):
         PWMB.start(vel)
-        if(GPIO.input(DataMotorL)==1):
-            if(GPIO.input(DataMotorL)==0):
-                contador=contador+1
-                print ('contador izquierda = ',contador)
+        if (GPIO.input(DataMotorL) == 1) and (GPIO.input(DataMotorL) == 0):
+            contador += 1
+            print ('contador izquierda = ',contador)
     MOVIMIENTOS.STOP()
