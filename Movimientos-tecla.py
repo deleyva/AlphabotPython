@@ -3,7 +3,7 @@ import time
 
 import MOVIMIENTOS
 
-print ('TECLAS ¡en minúscula!:\nPARAR = tecla ESPACIO\nADELANTE=FORDWARD = f\nATRAS=BACKWARD = b\nDERECHA=RIGHT = r\nIZQUIERDA=LEFT = l')
+print('TECLAS ¡en minúscula!:\nPARAR = tecla ESPACIO\nADELANTE=FORDWARD = f\nATRAS=BACKWARD = b\nDERECHA=RIGHT = r\nIZQUIERDA=LEFT = l')
 tecla='x' 
 while tecla!=' ':
     tecla = input('\nPresiona una tecla y después enter : ')
